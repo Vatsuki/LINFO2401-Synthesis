@@ -1,0 +1,581 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % if using pdflatex; if using xelatex remove this and use fontspec
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref} % For clickable Table of Contents
+\usepackage{parskip}  % Adds space between paragraphs instead of indentation
+\usepackage{titlesec} % For custom section formatting
+\usepackage[english]{babel}
+\usepackage[
+a4paper,
+top=3cm,
+bottom=2.5cm,
+left=2.5cm,
+right=2.5cm
+]{geometry}
+
+\title{LINFO2401 - Open Source strategy for software development }
+\author{Student}
+\date{Last modification : \today}
+
+
+\begin{document}
+	
+	\maketitle
+	\tableofcontents
+	\newpage
+	
+	\section{About the course}
+	
+	\subsection{Why ?}
+
+
+	The text traces the rapid spread of computers. From rare, massive machines to ubiquitous devices embedded in everyday objects—and argues that their growing complexity has outpaced most people’s understanding, including that of many engineers and programmers. Instead of deeply understanding computers and code, practitioners often rely on memorized techniques, copy-pasted solutions, and unexamined rules, building systems they do not truly understand.
+	
+	The point of this class is not to add more superficial knowledge, but to encourage  reflection on what computers are, what writing code means, and how software affects society. We distinguish \textbf{engineers} and \textbf{theologians}. Engineers work within non-negotiable physical laws to build things that seem to defy nature, such as bridges or airplanes. Theologians, by contrast, treat arbitrary human rules as unquestionable truths and forbid asking “why.”
+	
+	Traditional engineering disciplines must obey physical constraints (gravity, materials, stability), but most software engineering operates almost entirely under arbitrary human-made rules rather than natural laws. As a result, many software developers function like theologians: they follow established conventions without questioning their origin or purpose and resist critical inquiry.
+	
+	So, let’s try to change that and put back "science" in "computer science" and "engineering" in "software engineering". Let’s become engineers. True engineers and scientists are defined not by diplomas or accumulated knowledge, but by their habit of questioning. The theologian asserts “it is so,” the scientist asks “why,” and the engineer asks “how”, a question that necessarily begins with understanding “what” is really going on. \footnote{Section based entirely from \href{https://forge.uclouvain.be/ldricot/lingi2401/-/blob/master/syllabus/1_why_are_we_here.md?ref_type=heads}{Chapter 1 of the syllabus }}
+
+	
+	Method of thinking :
+	1.	Write the problem
+	2.	Think hard
+	3.	Write the solution
+	Most problem are because you focus on step 3 (writing the solution first). But what is the problem really ?
+	Always question what you are doing : WHY ?!
+	
+	
+	\subsection{Project Guidelines}
+	\begin{itemize}
+		\item \textbf{Contribution Strategy:} Analyzing open issues, communication etiquette, and avoiding ``diving straight into source code.''
+		\item \textbf{Storytelling:} Explaining choices and interactions (Focus on human interaction over technical code). Why did you choose this project, did it was your first choice, how did you exchange with people. How is the project managed, decision taken, how are interaction ? What is the project, who is involved. Convinced the teacher you learn something, what is open source and human interaction. Important to contact the community. Just a message, then work alone and a pull request 2 mouths later isn’t good. Often their is tickets
+		\item \textbf{The Journal Approach:} Importance of writing day-to-day progress.
+		\item Do all git command with the terminal
+		\item Put the link to your contribution in the report.
+		\item The contribution should be merge, or at least the student must have done everything so that the contrition will be merged. Student must follow up why the contribution was not accepted.
+		\item Must thing to do is be able to be able to compile the project. So do not try to contribute to firefox / libre office. You must be able to see your contribution yourself. Compile and do a very small modification.
+		
+		\item \textbf{Git Workflow:} Commits, Pull Requests (PRs), and merge requirements.
+		\item \textbf{Problem Solving:} The ``Why, What, How'' method (avoiding the rush to solution).
+	\end{itemize}
+	
+	\textbf{Comments about the oral presentation :}
+	
+	 ·	Teacher first clicks link to see bug report, see the commit, see the interaction with the community.
+	 ·	Not too technical; insist on the interaction with the community. What did you learn from the whole process?
+	 ·	Why you chose this one. Why did you fail? How did you choose the next project?
+	 ·	Before starting, make sure you can build the project on your computer and that you can modify it. The teacher is not judging your code.
+	 ·	He judges how much you learned.
+	 ·	The point is interaction with the community, not just coding alone for 3 months.
+	 ·	Book: What did you learn by reading the book? What links did you make with something else? Don’t do a summary of the book.
+	 
+	
+	\subsection{Expected Exam content}
+	Note that you can come with your own exam question. If you are passionate about something, talk about it, what are the current open-source project of your passion ?
+	
+	Other that that, you can expect : 
+	\begin{itemize}
+		\item Analyse an Open Source project (License, governance, community, challenge).
+		\item Being able to do basic git commands through the terminal.
+		\item Explaining what is a License + examples.
+		\item Difference Rival good VS non rival good
+		\item Given the description of a License, explain what type of license it is.
+		
+
+	\end{itemize}
+	
+	\subsection{Book}
+	You can read a book to get one bonus point.
+	
+	
+	
+	
+	
+	\newpage
+	
+	\section{Early History}
+
+	
+	\subsection{The importance of writing}
+	
+	
+	
+	To understand computers, we should view them primarily as communication devices, not merely as machines for numerical computation. Their origins lie in humanity’s fundamental need to communicate across time and space.
+	
+	The most decisive invention in human history is \textbf{writing}, which made history, truth, time, and distance possible concepts. Before writing, knowledge was mutable, time was limited to the present, and distant places were largely mythical. Writing transformed human cognition by enabling communication with absent people, including those long dead, and by providing durable proof of facts. Because of its power, writing was often controlled by educated elites.
+	
+	Writing also differs fundamentally from speech: it forces clarity and logical consistency, empowering the reader rather than the speaker. Tools that read and write on our behalf weaken our ability to think, and change how we appear for people reading us.
+	
+	
+	\textbf{Solution for faster long distance communication :}
+	
+	For millennia, writing was limited by human and physical speed, making long-distance communication painfully slow. This limitation drove the search for faster transmission methods. Early solutions like the \textbf{\href{https://en.wikipedia.org/wiki/Semaphore}{semaphore}} system relayed visual signals between towers and worked effectively but were costly and labor-intensive.
+	
+	The major breakthrough came with the\textbf{ \href{https://en.wikipedia.org/wiki/The_Daily_Telegraph}{telegraph}}, which used electricity to transmit messages over wires.
+	The use of electricity automatically bring a binary mentality (current flow on or off), and led to coding systems such as \textbf{Morse code}. Telegraph operators became fluent in this new language, forming social bonds, playing games, and even conducting relationships over long distances.
+	
+	With the development of reliable submarine cables, the world became globally connected, allowing written messages to travel across continents in hours rather than months, laying the foundation for modern digital communication.
+	
+	\footnote{Section entirely based from \href{https://forge.uclouvain.be/ldricot/lingi2401/-/blob/master/syllabus/2_typewriters_and_telegraph.md}{Chapter 2 of the syllabus }}
+	
+	\subsection{Typewriters and Keyboards}
+	
+
+	The text recounts the invention and impact of the **typewriter**, focusing on how technical accidents and commercial decisions shaped the way humans still interact with computers today. 
+	
+	Christopher Sholes developed the typewriter to produce standardized, readable documents, offering an alternative to slow handwriting and expensive printing processes. Among many competing designs, his machine stood out.
+	
+	Key aspects of modern keyboards especially the **QWERTY layout**—are shown to be largely accidental. In his prototype, the keyboard were not aligned due to technical constraint and jamming. A temporary fix was to randomize the layout  to avoid frequent use of letters next to each other. \textbf{This lead to the QWERTY layout}. Even after the defect was fixed, the layout was kept for commercial reasons, to avoid admitting flaws in already sold machines. As a result, an inefficient and arbitrary keyboard arrangement used worldwide.
+	
+	National variants such as \textbf{AZERTY} and \textbf{QWERTZ} likely arose not from technical necessity but from commercial protectionism, a trend later reinforced by IBM, which further fragmented layouts across countries (AZERTY BE, AZERTY FR).
+	
+	Although typewriters symbolized administrative work, an unexpected effect emerged. People (especially professional women typists) learned to type extremely fast. This efficiency led major writers such as Nietzsche, Steinbeck, and Hemingway to abandon handwriting. The typewriter altered not just their productivity, but their style of writing and thinking.
+	
+	Attempts to correct QWERTY’s inefficiencies, most notably **Dvorak’s keyboard layout**, proved technically superior and enabled record typing speeds. However, they failed commercially because users were already accustomed to QWERTY. 
+	
+	If you are serious about writing on a keyboard, learning to touch type is the best investment you could ever to. Anyone serious about using a computer should spend some type to learn real dactylography. 
+	And if you are learning touch typing, learning a layout optimized for your language is probably a very good investment. Some current efficient layout :
+	
+	
+	\begin{itemize}
+	\item English : Colemak (successor of Dvorak)
+	\item Français : Ergol (successor of Bépo)		
+	\end{itemize}
+	
+		\footnote{Section based from \href{https://forge.uclouvain.be/ldricot/lingi2401/-/blob/master/syllabus/2_typewriters_and_telegraph.md}{Chapter 2 of the syllabus }}
+	
+	\subsection{Data Encoding: ASCII to Unicode}
+	
+	Origine de l’ascii : merge entre machine à écrire et télégraphe ? Code en 7 bits. Before it was bodot ? A in ascii is for American. So iits good for language without any accent. Each language has its own version (ISO-XXX)
+	UTF-8 is an extension of ascii. So all ascii char are still compatible. Instead of a fixed length for char, 8 bits for all char.
+	
+	Toujours considéré une alternative et tout les cas possible  : html : <im src = “”, alt=””>
+	Accessiblitity is good for everybody
+	
+	\subsection{Hardware \& Early Machines}
+	
+	Premier ordinateur, machine pour craquer enigma par turing \& co
+	Punch card : better way to encode data, rather than manually moving big cables. Holes = 1, not hole = 0. First programming language.
+	Batch processing : separation between computer program and the data ?. Computer do the computation on its own ?
+	Bug : “program not acting has it should have”. Peoples didnt understand why the output was wrong. They finally enter inside the computer room. They found a dead bug doing a short circuit.
+
+
+	
+	\subsection{From Batch Processing to Terminals}
+	When computer become faster, we though we could interact in real time. They added the typewriter. Instead of sending electrical signal to wire, directly to computer. It is the first terminal. Its hardware.
+	After their was magnetic tape
+	Modern computing started with UNIX
+		Assembly : set of instructions the computer understand ? Translator between math formula and assembly equivalent. Then we add a program that do the translator automatically. Birth of FORTRAN, the first computer language.
+	\newpage
+	
+	
+	
+	\section{The Birth of UNIX and the Internet}
+
+	
+	\subsection{From Multics to UNIX}
+	
+	Most of the time when we interact with a computer, it is idle.MULTICS big project coming from the BELlabs. One nerd alone for a mouth build UNICS (kernel, filesystem, shell (command interpretor), and ?) all in assembly. He Formalize the concept of file, tree like directory, .everything in unix is a file.
+	Invention of B: Before, if a small change in a OS was done, they had to change everything.Then it become C and UNIX. 
+	
+	Main frames compared to Microcomputers : couldn’t run unix : atari, comodor. Play games and small programs
+	
+	\subsection{The Shell and Pipes}
+	
+	\begin{itemize}
+		\item 	< to add input
+		\item > for output
+		\item | input of one is the output of the other
+	\end{itemize}
+
+	Shell = asking for a command (bash, zsh). Not the same thing as the terminal!
+
+
+
+	\subsection{The Networking Revolution}
+	To communicate witha computer, you need to be connected to it directly. Pour connecter 2 ordinateurs : mettre le téléphone sur l’ordinateur. Le pc convertit les signal sonore en bits ? Modem ?
+	What if each computer had an adress and we can send packets to the correct computer. So need to be connected to only one comuter that will route the packets. TCP/IP
+	Web is one application / protocol running of top of TCP/IP (internet). So for now we have internet bt not yet the web.
+	Telnet : before SSH and not encrypted
+	FTP : transfert file
+	SMTP : mail
+	UUCP : unix to unix copy, used by usednet (public forum). Big database synchronyse to all computer. So when you wanted to see a message, you had to dl everything. This is how people started to exchange on the internet
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	\newpage
+	
+	\section{Proprietary VS Free Software}
+
+In toyota car, they put the worst engineer fo rthe soft part. “bc a car is about mechanical”. Toyota missile and they claimed a mechanical failure. But after investigation they found the worst code ever.
+	
+	\subsection{AT\&T's Monopoly}
+	
+	
+	 How antitrust laws forced UNIX to be shared initially, then closed later.
+	 
+	 
+	 Because AT\&T was consider a monopoly, they couldn’t make use of UNIX so they let the searcher do whatever they want. SO they were sharing code with university. So at the beginning it was all open source. Everyone has its own version of unix. Open source and sharing knowledge (pirating) is the default
+	
+	When monopoly where “good for the gouvernement”, Unix “belongs “ to At\&t. BSD was probably illegal so everyone afrait to use it.
+	
+	
+	AT\&T was afraid to use UNIX bc monopoly was a really bad thing. Then AT\&T say it must become “closed source”. So researcher “forgot” the tape of UNIX so that it still can be shared. Student weren’t allowded to see the source code... Birth of BSD 
+	
+
+	
+	\subsection{Apple VS Franklin}
+	
+	The legal precedent establishing that binaries/ROMs can be copyrighted (software as property).
+	
+	Visical was the first spreadsheet soft, running an a apple software. So everyshop wanted to buy an apple computer bc of this soft. -> dump of the rom from apple computer to own rom to run visicalc. (apple computer vs Franklin computers). Apple sued, but the defence said they just copied 1’s and 0’s. This is machine output so cant be copy righted.
+	Sundenly their is a law forbidding copying binaries. In 7 years, proprietary didn’t existe, bill gates crying about not to copy his soft, to impossible to do it
+	USA impose their laws to others bc they are really powerful.
+	The pirate bay : in sweden it was legal to dl and share movies. Sweden changes its law bc was menacé de rompre ses deals militaires avec les USA? 
+	Pricipe of science : exchange information. Innovation comes from inspiration
+	
+	Apple won appeal against franklin (binary code)-> politics favor corporation. Company wouldn’t be able to grow if others could use them. It was a choice to give more power to corporation so that they can grow.
+	
+	
+	\subsection{Microsoft}
+	
+	1976 : ad in magasing to the company micro-soft. It said ouin ouin soft cant be use for free bc need to pay the dev. However noone cared about it. Everyone shared everything. The spirit of the day was, if you pay for a soft, you could easily copy it and share it to your friend.
+	Bill gate tried to change the world and make it proprietary. Intellectual proprietary was not really defined
+	Lisp : ancestor of AI. People was exchanging
+	
+	The ``Letter to Hobbyists'' and the shift to paid software (BASIC, MS-DOS).
+	
+	
+	Before, the bigger the computer, the best. Nobody beleived a small computer would play a role. Small personal computer for hobbyist (game). Each brand was sellinng their own comuter with their own OS. Someone at IBM had the idea to sell parts of the computer and sell them. Called “personnal computer”. IBM was focused on “mainframe” big computer. At the end the didn’t had any operating system ( OS/2 not finished  and CP-M fails).a stock lawyer of IBM had A rich friend ? Told it had a son that works in computer and could do a operating system. So bill gates went IBM and works with it. Software called “micro-soft”. However it was not really an OS. -> Q-DOS (quick dirty OS) -> MS-DOS. Very shitty OS, 1single process, no GUI. 
+	They didn’t sell the OS, they tell to get some money for all pc sold with it. And they tell ibm to be oblifated for each soft had to use their soft. They accepted. At the end it was the only OS. Later new company came to make compatible computer part (hp, dell, ..)
+	Everyone was trying to use their own version of linux (xenix by microsoft, hpux by hp, solaris by ?) so hard to make software that will run on all computerter
+	The only reason windows is so popular, is bc it was what was in all pc, so dev would do software for windows so if you wanted to get the software, you had to use windows. Still the case today, the only reason we use windows is bcause soft are made for this bc everyone use windows bc sold with each pc.
+	
+
+	
+	
+	\subsection{The Reaction: The Free Software Movement}
+	
+	\textbf{Richard Stallman (RMS):} The MIT Printer Story (the catalyst for the movement).
+	
+	Richard Stallman : working at MIT. Complex jokes (fire truck on roof). Richard wanted to see a code of a printer and get refused because “proprietary”. Richard took the source code to the computer controlling the printer that get jammed. He modified the code to send email when the print worked. MIT called him an “hacker”. Then they got a new printer with the same problem. He wanted to see the source code but couldn’t find it. Send a message to the vendor but they didn’t really wanted to send him. But he had a friend working their who wrote the code. He asked him but was not allowed to share. Couldn’t believe it bc he lived in a worl where everyone could share everything. 
+	Same thing happens at the MIT, new vendor arrived. The code he wrote was used and extended and make proprietary. Richard not happy, re implemented all the features for free. That was crazy he could catch up alone for some time.
+	
+	
+	\textbf{Definition of Free Software:} The 4 Freedoms (Use, Study, Share, Modify).
+	
+	Richard came with 4 free of software. Free as freedom, not like gratis. Those are just arbitrary but for him, a soft is free if :
+	1.	Use
+	2.	Study : free to study the soft. What was the decision was used in the software. So you need the source code
+	3.	Right to share, you can make copy of it
+	4.	Right to modify
+	Their is nothing about money. You couldn't technically sell it ?
+	Richard left mit and created emacs, started to sell it : you send a tape with a check and copied to source code to the tape and send it back. He encouraged every one to copy and shared it.
+	
+	\textbf{GNU Project:} Creating a free UNIX replacement (Tools, GCC, Emacs).
+	
+	
+	
+		
+	\subsection{Pros and Cons of Propriatary / Open Source}
+	·	 Security by obscurity: completely wrong — when coding in open source, you’re forced to care about it.
+	·	Package the software the way the customer wants.
+	·	Business model: becoming a big company by distributing and packaging free code.
+	·	Maintenance, security, support → huge work, which is not writing code.
+	·	Long-term sustainability: company switching priorities, company going bankrupt?
+	·	Code quality: Proprietary — the product matters, not the code. Most of the time, it’s poor-quality code.
+	
+	
+	
+	\newpage
+	
+	
+	
+	
+	\section{The Linux Revolution \& Modern Development}
+
+	
+	\subsection{The Missing Kernel}
+
+	
+	Linus Torvalds wanted to use UNIX but for microcomputers (small personal computers). At first he just wanted to be able to connect to a UNIX computer. He was not satisfied with the OS he had. He built an assembly software to automatically start a session to the university UNIX machine, just to access the “usenet group”? and talk to people. Usenetgroup was like a forum (no web).
+	He showed it to his friends and added multiprocessing to his computer (in assembly). When pressing Ctrl+Alt+F2, a new terminal popped up.
+	
+	
+	One day on Usenet, he posted a message about Minix (UNIX for students to learn). He said he had made a small OS. 
+	
+	
+	Linus discussed on the forum minix on Usenet.mini unix for learning. People was interrested of linus works and started doing contribution. There were not contribution allowed on minix. So linux got new versions.
+	
+	
+	
+	\textbf{GNU Tools + Linux Kernel = GNU/Linux :}
+	Since Linus used GNU tools, it became popular? He added more and more features until it became a full OS. Most of the tools are from the GNU project, so we say “GNU/Linux.” He was greatly grateful to Richard Stallman’s tools, so he put his OS under GPLv2.
+	
+	GNU –> implement unix soft with copyleft license. (copyleft : If you don’t distribute it, you dont have to share the code, its a contract between code author and the user. So if no user, no need to make public. User have the right to share it themself because copyleft means no restriction. Free to give it to someone else. Therefore you become the distributor. )
+	
+	
+	\subsection{The UNIX Wars \& Standards}
+
+	
+    \textbf{BSD vs. System V:} The lawsuit that slowed down BSD adoption.
+    
+	BSD vs. UNIX: Bell Labs sued Berkeley, saying BSD used codes from UNIX. Everyone was afraid to use BSD because the use of BSD could become illegal if they loose in court. But GNU/Linux appeared with the web. In fact only 6 files were from Bell Labs, but it took years to find them. Once they rewrote them, BSD became officially okay to use.
+
+	
+	 \textbf{POSIX:} The attempt to standardize UNIX (Interfaces, Shell vs. Terminal).
+	
+	There was not one UNIX release. Source code was just exchanged, and you adapted it to your needs. Now the world has changed; source code was made by companies for people who didn’t care about the source code. Companies made the source code proprietary. Open source was the default.
+	
+	
+	UNIX was very fragmented. One software couldn’t run on another version. The idea of POSIX is to define a standard. To create a standard, you need deep knowledge from various experts. When the group agrees, they release a standard. There is no obligation to follow a standard; it’s a choice to follow them (also a marketing practice to say you follow one). If you want to follow one, someone has to validate that you correctly follow it. For W3C, there are also automatic tools to check if your website correctly follows it. Companies could follow a standard just before they are audited, then stop following it but still get certified.
+	Organizations for standards: ISO, OASIS, IEEE, W3C.
+	The problem with all UNIX versions is that users were captive under one version. POSIX defines standards to explain what UNIX is. It even defines what tools you should have (ls, cd) and their arguments. That’s part of the POSIX specification.
+	GNU by Richard Stallman followed most of the POSIX specs. He also added more features. The GNU extension was to add more verbose options for arguments: ls --all compared to ls -a.
+	All UNIX tools were bundled in BSD.
+	
+	
+	
+	\subsection{Evolution of Version Control}
+	
+
+	Linus started to implement the whole POSIX standard.
+	Linus asked a friend to get space on the university FTP server. This friend named the folder “Linux.” Suddenly, there was a new OS you could run on a 386 personal computer (instead of DOS or Windows).
+	Sending a patch (Perl script file) to Linus = a diff between files to apply the patch to the source. If there was no clear conflict, the patch would be applied. He was doing all the work to “merge” it himself, reply, etc. At some point, he applied a batch of patches and decided to release it and put it on the server. The point was not to make a stable release but a consistent one so that people could test it. You could simply send patches by email with Git. Within the email, you could read it, apply it, and make comments. No need to change to a confusing interface. The whole workflow could be used without GitHub (interface).
+	
+	
+	Linus needed a version control system. The problem was that BitKeeper was proprietary. People made a free client for it, but the company sued those developers. Linus was annoyed about all those discussions and problems. He disappeared for 2 weeks, and he created Git. Git is basically a filesystem. Git stores a lot of diffs. Git explores the folder, recreates it based on the whole history. With Git, you have the whole history, so you can fork it. So even if Linus didn’t accept a patch, you could make your own forked version of Linux. This is thanks to the GNU license and Git.
+	Linus Torvalds became the main maintainer. For each part of the source code, there were sub-maintainers who did the first filtering.
+	
+	By default, a maintainer should say no. Once you accept it, it’s there forever. If there is a problem, bug, or security vulnerability, the original person who submitted it will probably disappear in the future. So the maintainer has to understand the patch. Is it something good for the user base to accept the patch? → Start a discussion. Sometimes people write code without realizing they don’t really need it.
+	Splitting the patch into small pieces helps the maintainer understand it more easily, and you can realize that some parts might be useless.
+	·	The normal way: create patch, apply patch.
+	·	GitHub: proprietary, creates a centralized request, creates a merge request, accepts them on the web interface. “Not the true Git way.”
+	
+
+	Linux kernel mailing list : discussion started their. Linus split the code in separated modules. Over teh time each modules got their maintainer. So each contribution go firest to those submaintainer to do the filtering, then in go to linus. Before contribution was rely centrilise. Merge before commit. CVS / SVN was difficult to work on so he he used a proprietary soft. Enough of discussion, 2 weeks of holliday, he developed git. Git his written like a file system. Git was deve for linux kernel dev. Instead of taking all the upstream stages, you can commit loccaly and then you send your merge / PR. Scott Sharpan added a  web interface on top of git?
+	Github force to use UI for merge ? Github acquired by microsoft so back to the original problem.
+	
+	
+	\subsection{Community Dynamics}
+	
+	Code of conduct imortant, if not written it’s implicit (and follows the leader)
+	You can’ accept every opinion (framework laptop errors, gave money to withe suppremacist and said they want to accept anyone)
+	With git you can track how the code of conduct has changed.
+	
+	
+	If disagree with maintainer, you can create your own fork to implement it as you want.
+	Either a simple featuer sometimes it can out lead the original project. (example : OpenOffice was the open version of a proprietary office suite. However the company started shitting on it, so the community created the fork : LibreOffice.
+	Sometimes a fork can be merged back
+	
+	
+	Bus factor: how many people does it nned to be ride over by a bus for nobody could maintain / work on the project. When we write something, think about the othres who will need to also work on the same project, or even for you later. If it was difficult for you, write docs to make it easier for others.
+	
+	\newpage
+	
+	
+	
+	
+	\section{Legal Frameworks, Economics \& Licensing}
+
+	
+	\subsection{Rival good VS non rival good}
+	
+	
+	\begin{itemize}
+		\item Rival : If i take pasta from the shop, their is one item less in the shop, the shop lose money, only one persone can use it. stealing
+		
+		\item Non rival : their is a bridge an dyou had to pay to cross the bridge. If you don’t pay and cross the bridge its not stealing in the sense that people who build the bridge didn’t lose money (lost money opportunity)
+		First time we have seen “intellectual property” : greek city where the inventor of a recipe had to be paid for one year every itme a cook was doing the dish.
+		Coying music from cd to tape was a quality lost but not a problem, bc music was assiocated with the physical object.
+		Before a book was really expensive (monk copy) then cheap with type machine. At the beginning their was no protection for author. The content could be “stolen”, ideas could be spread accross everywhere. The idea inside the bood was not rival anaymore. So it was a problem for the king that wanted to keep their power.
+		Copyright was a pure censorship of book.
+	\end{itemize}
+	
+	Droit d’auteur, composé de droit patrimonial and droit moral. 
+	
+	
+	\subsection{Intellectual Property Laws}
+	
+	Droit moral could never be removed (have your name, be recognize has the author, author can say his work cannot be said by nazi party bc he will look like a nazy himself
+	Droit patrimonial : right to sell, similar to the copyright. Their is no taxes on this rights (at least in Belgium) generally in a contract, you give all your patrimonial rights to the employer. 
+	
+	You can sell a copyright but not a droit d’auteur. So what happens when the author died ? 50 years after death will go to public domain. So every body could use it.The US was really afraid bc mickey mouse will soon reach this date (50 years after death of Walt Disney). He didn’t wanted mickey to go to public domains. So mickey mouse laws and become 70 years. Currently it became public domain. So suddenly their was a big hole in the public domain. Catastrophe for the culture bc if the author think his work will not be popular, he will stop publishing. And cannot copy his work bc of this law. So all those works will died and be forgotten.
+	When their is no 1 author, the law is 70 years after the last work. So for Tintin, the guy will publish a new book one year before it reach this date just to extend it.
+	
+	Trade mark ?
+	Patent : temporary monopoly on what you have invented. But what about when 2 different people got the same idea independently ? Group that decide the inventor. However you don’t have to invent it. You just have to invent it.its basically lawyer discussion to lawyer. So company tries to do has many patent has possible. When patent infringement it will go to “who has the most patent”, even if they are all stupid. In the pharma industry, they slightly modify the formula so that their is a new patent .and under the same name.
+	
+	
+	When independence : USA said that they will not recognize any patent from Europe. So they can copy everything and grow faster. That’s how every contry start when they want to become industrial giant. WW2 has made american product know therfore they got a market to sell their product like coca cola.
+	Pirate bay was perfectly legal in sweden because it was just text (torrent) that couldn’t be copy righted. Pirate bay fucked around with the copyright noticed until one day. Police raid ? It took everybody by surprise; USA send treat to sweden, if those guys of pirate bay didn’t go to jail, USA will stop “obama deal “? Mutual investment of military ? USA impose they view of the world to others.
+	Kopimism religon, life if share by copying religion.so if people went to court you can say you are kopimislm you could copy code. Freedom of relgion won in sweden. 
+	
+	Stuff who “take for granted now” where choice by politics to convice people that their is no alternative.
+	
+	
+	
+	Piracy is not bad :) the brain washed with the small scene at the beginning “you wouldn’t steal a car, piracy is a crime”, well the font they use was pirated, and every pirate didn’t event see this scene. OpenAI, Meta can pirate to train their AI models jsut bc they have money. Somes are protected by the lows, othrs must obey the lows.
+	
+	
+	
+	\subsection{Software Licenses (The Spectrum)}
+
+	
+	Berkeley : was doing a lot of soft and made BSD. Before their was no official unix so everyone wanted to do its own.
+	
+	We couldn’t say who was the author of a given software. 1 line of code could belong to 1 person.
+	License is ~a contract = agreement bewteen two party. Between the owner of the copyright of the software and the user.and could be a contract for each user. A license is a standardized contract and its not tied to the sofware but to a specific distribution of the software (bc can vary to each user). For example if we dl soft from github they will be a specifc license.
+	One of the first license was the BSD : you can do whatever you wnat but you have to list the author.so compatible with the 4 Free statment of Stalman. But we cannot garantee that the sofware stay free.
+	The license happend when their is a exchange (dl the source code), the act of distributing. So if you dl a code with a specific license, you have this license for life even if in githube the license change.
+	GNU : (gnu is not unix) whole operating system with its compiler gcc + emacs. So the gnu public licence (GPL) to garentee a soft stay libre. So the 5th freedom is “ you cant remove freedoms”. Concept of copyleft?
+	
+	
+	A license is a contract between the owner of the software and the user. The owner of the rights of the software is not necessarily the developer; he can sell the rights (for a salary). They apply to a specific distribution of the software. So for the same software, you can have multiple licenses, dual licensing for the same software. By default: each file has its own license.
+	Family of licenses: 
+	·	Proprietary (restricts the rights of the user).
+	·	Permissive license (you can do whatever you want but must at least credit the original author: BSD, MIT).
+	·	Copyleft license: GNU/GPL, you can change the license but with similar rights (compatible license). If you put a GPL code fragment, the whole software becomes GPL.
+	GPL2 (Linux kernel license): Tivo problem, where you couldn’t run other software; and GPL3: you cannot prevent other source code from running on the same hardware. LGPL is for libraries and does not contaminate the whole process.
+	
+	
+	The user = the one who runs the code on a computer. When you do a Google search, the user is Google’s servers themselves. AGPLv3: the users are the ones using the output? Anyone connecting to the server has the right to get the source code?
+	
+	Agpl, is copyleft over the network : everyone who use the soft through a network must also be able to get the source code. So it’s More than gpl
+	
+	
+	\subsection{Non-Software Licensing (Creative Commons)}
+	 Adapting licenses for non-code assets (BY, SA, NC, ND).
+	
+	Creative Commons license: GPL, BSD, etc. are really focused on software. Now we want licenses for anything else: pictures, textbooks, games, anything that is not pure code. They can be used for code but don’t fit well. Games: license for the code and license for the assets of the game. The goal of the CC is to make a set of licenses for your own case. Do you want attribution to you? Do you want to allow other people to use your work commercially? Derivative works (can people modify it)? Are they forced to use the same license?
+	Clauses:
+	·	 BY: credit the author.
+	·	 NC: non-commercial (so not a free license).
+	·	SA: share alike, like copyleft, you have to keep the same rights (not a more restrictive license).
+	·	ND: no derivatives, I don’t want any modification.
+	·	CC0: no clauses, do what you want. As an author, you cannot abandon your rights, so you use an explicit license to say that (~like public domain).
+	A license is not revocable! If a file is distributed once with a permissive license, you can’t change it later.
+	CC is on version 4, because there was a bug in version 3. The license applies if you respect all of the clauses. If you don’t give proper credit, the whole license is revoked. If you use a picture and don’t credit it, you don’t have the rights of CC. The default license applies, and it’s standard copyright. So many scammers created databases of pictures with very long names. When people used the pictures and made a mistake in the name, they received cease and desist letters and were asked for thousands of dollars.
+	Licensing agreement: I give my code to the project (I’m still the author, credits, droit d’auteur), but I give up my copyright (droits patrimoniaux). You (the project/company) are free to update the license without informing me. Otherwise, they would have to contact everyone.
+	
+	
+	\newpage
+	
+	
+	
+	
+	
+	\section{The Internet Age \& The Browser Wars}
+
+
+	
+	\subsection{The Web (WWW)}
+
+		WWW was created by a belgian and a ? Located in france but a swiss office. It was something for the CERN. Present his invention www at the hypertext conference. No one cared at the use bc there was gopher competitor to organise information.
+	Protocols above TCP/iP that are not part of the internet : 
+	·	Smtp / mime
+	·	Ftp / binary
+	·	UCP / usenet
+	·	Telnet / 
+	The only thing missing was how to find stuf. You could dll, communicate, send command, but hot to find and organise ? -> gopher/gophermap appeard. There were no hypertext to jumpto other file.
+	Rober and ? Invented HTTP / HTML because gopher not popular in europoe. They developed the first web browser. Gopher was really intellectual. Mosaic ? University project. At first Tim Berwlly not wanted image inclusion in a webpage. So the guy left his unif and created his browser netscap and invented the hgml tag <img> aginast the will of tim. This Browser was popular, images makes the www popular but become unreadable.
+	
+	Browser war between netscape and internet explorer. Microsoft didn’t interpret html the same way of netscape to mess with their proprietary bullshit. However you had to dl netscape. And netscape used java/javascript for extension ?
+	Yahoo : One html webpage with link to other. Ads was asked merchent on the street if they wanted a add on the site for a day.
+	Netscape bubble went bankrupt becasue the bubble crashed ? 
+	
+	
+	
+	\subsection{The Dotcom Bubble \& The Browser Wars}
+
+	
+	In the stock marcket you can buy shares and sell it. You buy share to expect dividend to the sock holders. -> old way of thinkingNow you expect that the share of the company will increase in value and sell them back.If only one share was sold to 1000€, and if their is 1,000,000 shares, media says the company is valued at 1 billion €. But it doesn’t make sense bc it expects all shares to being sold at once at this highest sold share.
+	A bubble is at some point the price become irrational and it doesn’t make sense to buy. Until at some point someone said, “its really irrational, i start ot sell instead of buying”, then everyone start to sell and the ppirce crash down. 
+	In early 2000’s, there was a huge tech bubble.Peoples wase saying taht : “ Every body will user compuer, use internet, buy stuff only”.
+	Netscape was the main browsser and distributed freely. It has a lot of investors bc people thought it will become a good company. In 2000 there was a huge crash bc people was not buying anymore. The company goes bankrupt, the coode become open source and gave to a fondation company : “mozzila”. Later firefox after phenix born, so its the child of netscape.
+	Most company that was selling stuff online goes bankcrupt exept a small comapny selling books, named amzon bc the parents of the founder was really rich. It took thme 7 years to goe to evaluation before 2000 tech bubble explode. However the bubble created a lot of benefits since all the money was also used for the infrastructre of the internet (like cables, ...)
+	
+
+	
+	
+	
+	\newpage
+	
+	
+	
+	
+	
+	\section{Modern Challenges: Privacy, Security, \& Society}
+	
+	\subsection{Surveillance Capitalism}
+	
+	Google : Software to crawl automatically the webpage and make a search engine, also nearly bankrupt. Since they have so many information in the logs of the user. They used it to do targeted adversisement. Quickly the amercan departement said its against the constitution to spy. 
+	
+	
+	After the crash nobody wanted to advertized anymore on th einternet. Google was based on advertizing.For the internet userwas still using internet and most ws using google.
+	Every logs of google was quite complete like IP, user agents, .. So they can identify usrs. Then they will sell that to advertizers saying they know the markets and what user will want. In fact google didn’t know if it was working and we still don’t know. Currently we are in a bubble of personalized advertisement.
+	Privacy  : their is stuff you don’t want ot share with everbody.
+	Google starts to invades a lot in people privacy, like when you are doing search for illness. You don’t want google to record and sell those data.
+	those information could be used against you (china, trump). Tracking peoples localisation of young woman when they go to place were abortion is legal and were procecuded for trying to do it.
+	11//9/20001 change a lot politically. George Bush to use that event to get political control. All americans were terrified against terrorist. Us administration reallized that all the data about the terrorist they had it. They had all the data and could have realized an attoack could occure. However they didn’t had the technology to make those eveidence spot out. So they forget all charges on google for spying on us citizen, and ask google to help the gouvernement spy on citizen. Google become part of the us defence.
+	
+	
+	
+		
+	Edward snoden was working for the us intellignece. He was really partirote, wanted to become a solded but was too weak. But he was a geek connected to the internet. So he become a spy and was train for that. He saw that the internent traffic was analyzed and strored.
+	After snowden reveal, in fact, nobody cared. Now it’s the norm for people to say “it’s ok “
+	Once something is public, you can’t take it back in private : barabare ? Effect. Reasearcher of coast errosion took picture of the coast and there was a house of barbara. She said it was privacy invasion -> lawer -> complaint and case -> took people attention. From nobody care of her house to everyone knows about her.
+	
+	The founder of whastsapp was really into privacy (bc knew what it was to be spyed on). He tryid to make sure the content was encrypted and couldn’t be use easily. Then he sell whatsapp , against all his principals, to facebook. He had to work for facebook for some years to get all the money but leave earlier bc he was really angry of what they did. Facebook was linking all the data of who youre talking to, the rate, when, ... And they merge data from whatsapp and facebook.
+	
+	
+	When someone knows he is watched, his behavior will change completely. They comply and are less creative / revolutionary (experiment with a guard in a room).
+	Targeted ads may not work for selling stuff, but for politics it’s different. Gerrymandering: very strange way to vote in politics. There are some states / counties / sub-counties where you already know that Republicans or Democrats will win. So there is no point in investing campain money there. There are only a few battleground states / counties. Cambridge Analytica knew exactly those places, who those people were and exactly what the political position of people was. Trump paid Cambridge Analytica and they used data from Facebook.
+	GDPR tries to protect the privacy of people. Peoples has to know when they are spied on, so companies need the consent of users, so they created really annoying cookies and made people think it’s because of GDPR. It’s false. Marketing people are evil and tried to conveice peoples gdpr is annoying so it should be removed. In fact marketing peoples are affraid of gdpr.
+	No privacy allows others to manipulate people and elections. If you have nothing to hide right now, you can’t say the same thing in 10 years. You don’t know who will be in power. If you want to arrest someone but you don’t have a reason yet, you just have to look into all the data gathered over all the years and you will find something (even if it’s a stupid 10 years old thing).
+	Data from Europeans is more expensive, either more difficult ot obtain or more risky to use due to gdpr.
+	How to protect your privacy:
+	–	Fight with law, at the political level. It’s worth breaking the law for companies if the fine is less than the amount of money you get from breaking the law. In the VW pollution scandal, it was the engineer who wrote the code who went to prison, not the person who asked the feature to spoof pollution. 
+	–	Cryptography. To really work it should be open source. It’s really hard to do it. Kruger effect: the less you know, the more confident you are about the topic. Never trust someone who claims to have invented a new crypto algorithm. It means he is not able to check that he is himself illiterate on the topic. Telegram by default not encrypted + encryption done by random dudes not proved to be secure.
+	–	Not having your data on the company → decentralization or distributed instead of centralization. Email, for example, can be decentralized; Fediverse (Mastodon). Anyway, you need a protocol for decentralization because you need all nodes to agree. But it’s difficult to make a standard. You can’t force someone to use it; otherwise, it will be centralization.
+	
+	
+	\subsection{Security Concepts}
+
+	
+
+	
+	\textbf{Security by Obscurity:} Why it fails.
+	
+	Seucrity = Action taken by a community to ensure the members of the community respects the rules of the community. Rules are expected to changes, arebytrary, unfaire. It’s about specifc set of rules. The security is bout respecting rules. There is  3 way to enforce security. 
+	1)	The moral way : convince people to just follow the rules. The community will try to tell you what is good or bad. The security must based arount your own morality.
+	2)	Cost : expensive in time, money, effort ... To breack the rules
+	3)	The consequeces : Proba to get caught x the concequences.
+	If your security ins’t at least one of those, it’s not security. Putting military in the street without armed weapons is just a “security theater”. A terrorist that will blow up will not be blocked in any by this military. It’s just a political stuff to say “ we did something”. Aireport security is pure theater. 21  out of 25 tester were able to sneck weapons inside a plane during a test. No one knows why liquids are not allowed, bc it doesn’t make sense (it doesn’t stop liquid eplosion with an quantity restriction)
+	Sometimes security measures can be counter productive. after sep 11, big doors was put for the cockpit. They could be open only by the inside. In 2015 a co-pilot wantend to suicide himself, he locked himself in the cockpit. So we can say that this security measures killed 215 peoples. It allowed another kind of thread. When you do a security door, you assume there will be no danger from the inside.
+	If you don’t understand why it’s secure, assumes its not secured.
+	Security is about enforcing some rules. Adroid phones were at first open sources. Gradually google removes part of android and put proprietary google services. GrapheneOs is a fork of android to make it secure. Every appsruns in container withrestrictec permission. Google apps are NOT priviledged. Google says “your are protected”, but in fact you are not protected against google./e/os cant communicate with googles at all, and it’s ore user friendly. Both don’t adress the same  public
+	Security is always the security of the weakest link : front door with lot of locks but bakc garage dorr open.
+	Security by obscurity doesn’t work. When it comes to software, you have all the time you want ot test the soft, so no cost. No consequences when you still test, no moral. Not having the source code just made the cost a bit higher.the best seuciryt soft are all opensource. Bc the best peoples are looking at the sources code. The best secured openrating system is Open BSD. It’s 100\% open source.minimalistic os, every thing is discussed a lot. Bluetooth was removed bc no one knows how wthe stack was working.
+	A physical key, is security by obscurity. All private partes in NYC were open by the same simple key, one was lost. A journal paper post artical saying “this is the key, if someone find it, he could opoen everything” well they just realeased the “plan” fo the key so anyone could now opoen each dorr.
+	Snake oil ? People saying i made a system, i cannot find a way to break it so its secured.
+	
+	
+		
+	
+\end{document}
