@@ -1,3 +1,5 @@
+% Licensed under CC NC-SA 4.0
+
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc} % if using pdflatex; if using xelatex remove this and use fontspec
@@ -29,8 +31,6 @@ right=2.5cm
 	
 	\subsection{Why ?}
 
-
-	The text traces the rapid spread of computers. From rare, massive machines to ubiquitous devices embedded in everyday objects—and argues that their growing complexity has outpaced most people’s understanding, including that of many engineers and programmers. Instead of deeply understanding computers and code, practitioners often rely on memorized techniques, copy-pasted solutions, and unexamined rules, building systems they do not truly understand.
 	
 	The point of this class is not to add more superficial knowledge, but to encourage  reflection on what computers are, what writing code means, and how software affects society. We distinguish \textbf{engineers} and \textbf{theologians}. Engineers work within non-negotiable physical laws to build things that seem to defy nature, such as bridges or airplanes. Theologians, by contrast, treat arbitrary human rules as unquestionable truths and forbid asking “why.”
 	
@@ -172,7 +172,7 @@ right=2.5cm
 	
 	
 	
-	\section{The Birth of UNIX and the Internet}
+	\section{The Birth of UNIX}
 
 	
 	\subsection{From Multics to UNIX}
@@ -194,16 +194,7 @@ right=2.5cm
 
 
 
-	\subsection{The Networking Revolution}
-	To communicate witha computer, you need to be connected to it directly. Pour connecter 2 ordinateurs : mettre le téléphone sur l’ordinateur. Le pc convertit les signal sonore en bits ? Modem ?
-	What if each computer had an adress and we can send packets to the correct computer. So need to be connected to only one comuter that will route the packets. TCP/IP
-	Web is one application / protocol running of top of TCP/IP (internet). So for now we have internet bt not yet the web.
-	Telnet : before SSH and not encrypted
-	FTP : transfert file
-	SMTP : mail
-	UUCP : unix to unix copy, used by usednet (public forum). Big database synchronyse to all computer. So when you wanted to see a message, you had to dl everything. This is how people started to exchange on the internet
-	
-	
+
 	
 	
 	
@@ -220,9 +211,181 @@ right=2.5cm
 	
 	\newpage
 	
+	
+	
+	
+	
+		
+	\section{Legal Frameworks, Economics \& Licensing}
+	
+	
+	\subsection{The Economics of Goods} 
+	
+	\subsubsection{Rival vs. Non-Rival Goods} \label{rival&nonrival}
+	\begin{itemize}
+		\item Rival : If i take pasta from the shop, their is one item less in the shop, the shop lose money, only one persone can use it. stealing. A rival good, cannot be used by two people at the same time. Taking it without paying is clearly stealing because it deprives someone else of it. If you take an apple from a shop, it’s one apple less for someone else.
+		
+		\item Non rival : 
+		
+		Non-rival goods can be used by multiple people simultaneously without loss, such as access to a bridge.
+		Using such a good without paying may be illegal or immoral, but it does not constitute stealing in the strict economic sense because no one is deprived of anything.
+		their is a bridge and you had to pay to cross the bridge. If you don’t pay and cross the bridge its not stealing in the sense that people who build the bridge didn’t lose money (lost money opportunity)
+		First time we have seen “intellectual property” : greek city where the inventor of a recipe had to be paid for one year every itme a cook was doing the dish.
+		Coying music from cd to tape was a quality lost but not a problem, bc music was assiocated with the physical object.
+		Before a book was really expensive (monk copy) then cheap with type machine. At the beginning their was no protection for author. The content could be “stolen”, ideas could be spread accross everywhere. The idea inside the bood was not rival anaymore. So it was a problem for the king that wanted to keep their power.
+		Copyright was a pure censorship of book.
+	\end{itemize}
+	
+	Droit d’auteur, composé de droit patrimonial and droit moral. 
+	
+	
+
+	
+	Many countries, such as France, rely on "droits d'auteurs", patrimonial rights were the author has recognized perpetual rights on a work. Anglo-Saxon systems instead use copyright, a concept that originated in England as a tool for controlling and censoring book printing, and later evolved into a transferable “right to copy” non-rival goods.
+	
+	
+	\subsubsection{Software as a Good}
+	Historically, computers themselves were rival goods: they were large, rare, and impossible to steal. Software was initially viewed merely as instructions for using a specific machine, written for one computer and assumed to have no value elsewhere. As software grew more complex, the idea of portability emerged, making it possible to reuse and share programs across machines. UNIX was created and developed that way, most software were developed by sharing and copying. The computer industry was willing to encourage that fact as more software equated with more computers sold.
+	
+	At that stage, software was not considered an economic good in itself, but more like instructions for using an object like dishwasher. You wouldn't sold the instructions to use the dishwasher you already paid. Programmers freely shared software without commercial intent, because the real business was selling computers. More available software simply increased the incentive to buy hardware.
+	
+	
+	
+	\subsection{Intellectual Property Laws}
+	
+	\subsubsection{Two Major Systems}
+	\begin{itemize}
+		\item \textbf{Droit d'auteur (Civil Law - France/Belgium):} 
+		composed of:
+		\begin{itemize}
+			\item \textit{Droit Moral:} Perpetual, inalienable rights (right to recognition, right to integrity of the work). Example: An author can block their work from being used by a hate group.
+			\item \textit{Droit Patrimonial:} Economic rights (right to sell/copy). These can be transferred/sold to an employer.
+		\end{itemize}
+		
+		\item \textbf{Copyright (Anglo-Saxon - USA/UK):} 
+		Originally a tool for censorship and printing control in England. It evolved into a transferable "right to copy." It focuses more on the economic aspect than the moral rights of the creator.
+	\end{itemize}
+	
+	Droit moral could never be removed (have your name, be recognize has the author, author can say his work cannot be said by nazi party bc he will look like a nazy himself
+	Droit patrimonial : right to sell, similar to the copyright. Their is no taxes on this rights (at least in Belgium) generally in a contract, you give all your patrimonial rights to the employer. 
+	
+	You can sell a copyright but not a droit d’auteur. So what happens when the author died ? 50 years after death will go to public domain. So every body could use it.The US was really afraid bc mickey mouse will soon reach this date (50 years after death of Walt Disney). He didn’t wanted mickey to go to public domains. So mickey mouse laws and become 70 years. Currently it became public domain. So suddenly their was a big hole in the public domain. Catastrophe for the culture bc if the author think his work will not be popular, he will stop publishing. And cannot copy his work bc of this law. So all those works will died and be forgotten.
+	When their is no 1 author, the law is 70 years after the last work. So for Tintin, the guy will publish a new book one year before it reach this date just to extend it.
+	
+	Trade mark ?
+	Patent : temporary monopoly on what you have invented. But what about when 2 different people got the same idea independently ? Group that decide the inventor. However you don’t have to invent it. You just have to invent it.its basically lawyer discussion to lawyer. So company tries to do has many patent has possible. When patent infringement it will go to “who has the most patent”, even if they are all stupid. In the pharma industry, they slightly modify the formula so that their is a new patent .and under the same name.
+	
+	
+	When independence : USA said that they will not recognize any patent from Europe. So they can copy everything and grow faster. That’s how every contry start when they want to become industrial giant. WW2 has made american product know therfore they got a market to sell their product like coca cola.
+	Pirate bay was perfectly legal in sweden because it was just text (torrent) that couldn’t be copy righted. Pirate bay fucked around with the copyright noticed until one day. Police raid ? It took everybody by surprise; USA send treat to sweden, if those guys of pirate bay didn’t go to jail, USA will stop “obama deal “? Mutual investment of military ? USA impose they view of the world to others.
+	Kopimism religon, life if share by copying religion.so if people went to court you can say you are kopimislm you could copy code. Freedom of relgion won in sweden. 
+	
+	Stuff who “take for granted now” where choice by politics to convice people that their is no alternative.
+	
+	
+	
+	Piracy is not bad :) the brain washed with the small scene at the beginning “you wouldn’t steal a car, piracy is a crime”, well the font they use was pirated, and every pirate didn’t event see this scene. OpenAI, Meta can pirate to train their AI models jsut bc they have money. Somes are protected by the lows, othrs must obey the lows.
+	
+	
+	\subsubsection{The Copyright Spectrum}
+	Society often presents a false dichotomy: you are either the absolute owner (Copyright) or you own nothing.
+	\begin{itemize}
+		\item \textbf{Default Copyright:} In most modern systems, every work is automatically under copyright the moment it is fixed in a medium. All rights are reserved; others cannot use, modify, or share it without permission.
+		\item \textbf{Public Domain:} Works with no restrictions. Anyone can use/modify them. (Works usually enter here 70 years after the author's death—a limit famously extended by the "Mickey Mouse Protection Act" in the US).
+	\end{itemize}
+	Licensing operates in the vast space \textit{between} these two extremes.
+	
+	\subsection{Licensing}
+	\subsubsection{License as a Contract}
+	
+	\textbf{Definition :}
+	A license is a contract. In this contract, the customer agree to pay some money in exchange for the ability to use the software under certain conditions. The seller may impose conditions to use the software. For example, it could be said that the software cannot be used on a Tuesday. The example is absurd but this could be part of the contract.
+	
+	\subsubsection{The "Wall of Bricks" Analogy}
+	
+	\subsubsection{Copyleft: The "No More Bricks" Brick}
+	
+	
+	\subsection{Types of Software Licenses}
+	\subsubsection{Permissive (The "Do What You Want" Family)}
+	
+	\subsubsection{Weak Copyleft}
+	
+	
+	\subsubsection{Strong Copyleft (The GNU Family)}
+	
+	
+	\subsubsection{Dual Licensing}
+	
+	
+	
+	Berkeley : was doing a lot of soft and made BSD. Before their was no official unix so everyone wanted to do its own.
+	
+	We couldn’t say who was the author of a given software. 1 line of code could belong to 1 person.
+	License is ~a contract = agreement bewteen two party. Between the owner of the copyright of the software and the user.and could be a contract for each user. A license is a standardized contract and its not tied to the sofware but to a specific distribution of the software (bc can vary to each user). For example if we dl soft from github they will be a specifc license.
+	One of the first license was the BSD : you can do whatever you wnat but you have to list the author.so compatible with the 4 Free statment of Stalman. But we cannot garantee that the sofware stay free.
+	The license happend when their is a exchange (dl the source code), the act of distributing. So if you dl a code with a specific license, you have this license for life even if in githube the license change.
+	GNU : (gnu is not unix) whole operating system with its compiler gcc + emacs. So the gnu public licence (GPL) to garentee a soft stay libre. So the 5th freedom is “ you cant remove freedoms”. Concept of copyleft?
+	
+	
+	A license is a contract between the owner of the software and the user. The owner of the rights of the software is not necessarily the developer; he can sell the rights (for a salary). They apply to a specific distribution of the software. So for the same software, you can have multiple licenses, dual licensing for the same software. By default: each file has its own license.
+	Family of licenses: 
+	·	Proprietary (restricts the rights of the user).
+	·	Permissive license (you can do whatever you want but must at least credit the original author: BSD, MIT).
+	·	Copyleft license: GNU/GPL, you can change the license but with similar rights (compatible license). If you put a GPL code fragment, the whole software becomes GPL.
+	GPL2 (Linux kernel license): Tivo problem, where you couldn’t run other software; and GPL3: you cannot prevent other source code from running on the same hardware. LGPL is for libraries and does not contaminate the whole process.
+	
+	
+	The user = the one who runs the code on a computer. When you do a Google search, the user is Google’s servers themselves. AGPLv3: the users are the ones using the output? Anyone connecting to the server has the right to get the source code?
+	
+	Agpl, is copyleft over the network : everyone who use the soft through a network must also be able to get the source code. So it’s More than gpl
+	
+	
+	Some license would soon appear after Richard Stallmann defined the GPL and the 4 freedoms. Those licenses would be granting the access to Free Software but without guaranteeing the freedom that comes with it. Examples include BSD and MIT licenses. The MIT licence allows anyone to use, copy, modify, merge, publish, distribute, sub-licence and/or sell copies of the software. It is provided "as is", users may use the software at their own risk. As a further obligation, all copies or redistributions of the software must contain a copy of the MIT licence. The BSD license is similar to the MIT license. However, the BSD licence may have advertising clauses that require the original authors to be mentioned in any publicity relating to the software. Some BSD licence variants do not contain an advertising clause (FreeBSD)
+	
+\subsection{Non-Software Licensing: Creative Commons}
+
+	
+	Adapting licenses for non-code assets (BY, SA, NC, ND).
+	
+	Creative Commons license: GPL, BSD, etc. are really focused on software. Now we want licenses for anything else: pictures, textbooks, games, anything that is not pure code. They can be used for code but don’t fit well. Games: license for the code and license for the assets of the game. The goal of the CC is to make a set of licenses for your own case. Do you want attribution to you? Do you want to allow other people to use your work commercially? Derivative works (can people modify it)? Are they forced to use the same license?
+	Clauses:
+	·	 BY: credit the author.
+	·	 NC: non-commercial (so not a free license).
+	·	SA: share alike, like copyleft, you have to keep the same rights (not a more restrictive license).
+	·	ND: no derivatives, I don’t want any modification.
+	·	CC0: no clauses, do what you want. As an author, you cannot abandon your rights, so you use an explicit license to say that (~like public domain).
+	A license is not revocable! If a file is distributed once with a permissive license, you can’t change it later.
+	CC is on version 4, because there was a bug in version 3. The license applies if you respect all of the clauses. If you don’t give proper credit, the whole license is revoked. If you use a picture and don’t credit it, you don’t have the rights of CC. The default license applies, and it’s standard copyright. So many scammers created databases of pictures with very long names. When people used the pictures and made a mistake in the name, they received cease and desist letters and were asked for thousands of dollars.
+	Licensing agreement: I give my code to the project (I’m still the author, credits, droit d’auteur), but I give up my copyright (droits patrimoniaux). You (the project/company) are free to update the license without informing me. Otherwise, they would have to contact everyone.
+	
+	
+	\newpage
+	
+	
+	
 	\section{Proprietary VS Free Software}
 
-In toyota car, they put the worst engineer fo rthe soft part. “bc a car is about mechanical”. Toyota missile and they claimed a mechanical failure. But after investigation they found the worst code ever.
+	\subsection{The Rise of Proprietary Software : Microsoft}
+	
+		In Section \ref{rival&nonrival} we explained the at the beginning, software were freely shared. In 1976, Bill Gates tried to fight this philosophy by instituting software as a real business. The concept of License emerged to prohibit peoples to copy and share a software they have bought once.
+	
+	Only a handful of developers were considering the strange idea that code should not be copied. Amongst them a young programmer called Bill Gates. Unlike many, Bill Gates had only a business vision of the software world. His father, a famous and rich lawyer, probably transmitted him his legalese and business ideology. With his partner Paul Allen, Bill Gates had developed a BASIC interpreter and was selling it through their company called Micro-Soft (two words at the time). It should be noted that they hired multiple programmers to help them. 
+	
+	Bill Gates wrote "An Open Letter to Hobbyists" where he claimed that developing software cost time, money and that people should not steal software. This Open Letter to Hobbyists is an important landmark because it illustrates how common copying and sharing were. It also illustrates that a business oriented minority was trying to advertise a new ideology in which "sharing is stealing". Spoiler alert: they managed to make that ideology so successful that the "poor" Bill Gates became the richest man on earth only twenty years later
+	
+	1976 : ad in magasing to the company micro-soft. It said ouin ouin soft cant be use for free bc need to pay the dev. However noone cared about it. Everyone shared everything. The spirit of the day was, if you pay for a soft, you could easily copy it and share it to your friend.
+	Bill gate tried to change the world and make it proprietary. Intellectual proprietary was not really defined
+	Lisp : ancestor of AI. People was exchanging
+	
+	The ``Letter to Hobbyists'' and the shift to paid software (BASIC, MS-DOS).
+	
+	
+	Before, the bigger the computer, the best. Nobody beleived a small computer would play a role. Small personal computer for hobbyist (game). Each brand was sellinng their own comuter with their own OS. Someone at IBM had the idea to sell parts of the computer and sell them. Called “personnal computer”. IBM was focused on “mainframe” big computer. At the end the didn’t had any operating system ( OS/2 not finished  and CP-M fails).a stock lawyer of IBM had A rich friend ? Told it had a son that works in computer and could do a operating system. So bill gates went IBM and works with it. Software called “micro-soft”. However it was not really an OS. -> Q-DOS (quick dirty OS) -> MS-DOS. Very shitty OS, 1single process, no GUI. 
+	They didn’t sell the OS, they tell to get some money for all pc sold with it. And they tell ibm to be oblifated for each soft had to use their soft. They accepted. At the end it was the only OS. Later new company came to make compatible computer part (hp, dell, ..)
+	Everyone was trying to use their own version of linux (xenix by microsoft, hpux by hp, solaris by ?) so hard to make software that will run on all computerter
+	The only reason windows is so popular, is bc it was what was in all pc, so dev would do software for windows so if you wanted to get the software, you had to use windows. Still the case today, the only reason we use windows is bcause soft are made for this bc everyone use windows bc sold with each pc.
+	
 	
 	\subsection{AT\&T's Monopoly}
 	
@@ -252,42 +415,62 @@ In toyota car, they put the worst engineer fo rthe soft part. “bc a car is abo
 	Apple won appeal against franklin (binary code)-> politics favor corporation. Company wouldn’t be able to grow if others could use them. It was a choice to give more power to corporation so that they can grow.
 	
 	
-	\subsection{Microsoft}
+
 	
-	1976 : ad in magasing to the company micro-soft. It said ouin ouin soft cant be use for free bc need to pay the dev. However noone cared about it. Everyone shared everything. The spirit of the day was, if you pay for a soft, you could easily copy it and share it to your friend.
-	Bill gate tried to change the world and make it proprietary. Intellectual proprietary was not really defined
-	Lisp : ancestor of AI. People was exchanging
-	
-	The ``Letter to Hobbyists'' and the shift to paid software (BASIC, MS-DOS).
-	
-	
-	Before, the bigger the computer, the best. Nobody beleived a small computer would play a role. Small personal computer for hobbyist (game). Each brand was sellinng their own comuter with their own OS. Someone at IBM had the idea to sell parts of the computer and sell them. Called “personnal computer”. IBM was focused on “mainframe” big computer. At the end the didn’t had any operating system ( OS/2 not finished  and CP-M fails).a stock lawyer of IBM had A rich friend ? Told it had a son that works in computer and could do a operating system. So bill gates went IBM and works with it. Software called “micro-soft”. However it was not really an OS. -> Q-DOS (quick dirty OS) -> MS-DOS. Very shitty OS, 1single process, no GUI. 
-	They didn’t sell the OS, they tell to get some money for all pc sold with it. And they tell ibm to be oblifated for each soft had to use their soft. They accepted. At the end it was the only OS. Later new company came to make compatible computer part (hp, dell, ..)
-	Everyone was trying to use their own version of linux (xenix by microsoft, hpux by hp, solaris by ?) so hard to make software that will run on all computerter
-	The only reason windows is so popular, is bc it was what was in all pc, so dev would do software for windows so if you wanted to get the software, you had to use windows. Still the case today, the only reason we use windows is bcause soft are made for this bc everyone use windows bc sold with each pc.
 	
 
 	
 	
 	\subsection{The Reaction: The Free Software Movement}
 	
-	\textbf{Richard Stallman (RMS):} The MIT Printer Story (the catalyst for the movement).
+	In 1980, the United States Congress added computer software to the copyright code. In 1983, it was clarified that a computer software could be considered as literary work and thus could not be copied or modified without the author’s consent. At that point, software vendors explained that they never sold their software but only an utilisation license, exactly like an editor doesn’t sell you the content of the book but only the right to read it. 
+	One of the most popular condition that quickly arose was that users were prevented to copy the software, to modify it or to distribute it. Software became proprietary and, for the first time in the history of computing, people started to use software they could not modify or copy.
+	
+	\textbf{Richard Stallman :}
+	
+	a programmer called Richard Stallman was happily hacking in the MIT artificial intelligence lab where he started in 1971. "Hacking" was the word they used at MIT to describe "solving a hard problem". The problem itself didn’t have to be serious. The spirit at the time was to make complex practical joke. Everything in life had to be considered as a problem to be solved with the most original solution. Sharing ideas was a strong part of that culture. As computer ressources were rare and expensive, it was seen as counter-productive to keep a computer sleeping. If a computer was locked in a room for the night, Richard Stallman and his fellow coworkers made it a mission to free it in order to run programs on it. Freeing computers involved lock picking, crawling in the ceilings. Having fun.
 	
 	Richard Stallman : working at MIT. Complex jokes (fire truck on roof). Richard wanted to see a code of a printer and get refused because “proprietary”. Richard took the source code to the computer controlling the printer that get jammed. He modified the code to send email when the print worked. MIT called him an “hacker”. Then they got a new printer with the same problem. He wanted to see the source code but couldn’t find it. Send a message to the vendor but they didn’t really wanted to send him. But he had a friend working their who wrote the code. He asked him but was not allowed to share. Couldn’t believe it bc he lived in a worl where everyone could share everything. 
 	Same thing happens at the MIT, new vendor arrived. The code he wrote was used and extended and make proprietary. Richard not happy, re implemented all the features for free. That was crazy he could catch up alone for some time.
 	
+	One day, the printer was replaced in the MIT department where Richard worked. Printers were huge machines prone to being blocked. Richard had, long ago, modified the software of the printer to send a warning to the person requesting a print if the printer was blocked. As not everybody was working on the same story, this simple change prevented a lot of unnecessary walk through the MIT’s corridors.
+	Richard knew that the Xerox company would not send him the sourcecode to allow modifying the new printer. But he knew someone who worked on it and though he would simply ask him as he was visiting his university. Richard asked the source code and was expecting either a "yes, of course" or a "no". To his astonishment, he received a third answer:
+	"I can’t"
+	At that point, Richard Stallman understood that even good hacker and programmer could be forced to not share their work through contracts and licenses.
+	
+	When he was refused the code to the new printer, Richard Stallman understood that computer users would be divided into two groups: programmers and users. Users that would not understand anything because they could not, even if they wanted to.
+	He also understood that programmers were only programmers inside their own little company, they would become powerless users of all other software. They could not cooperate anymore. They could not share anything. They would become lonely.
+	
 	
 	\textbf{Definition of Free Software:} The 4 Freedoms (Use, Study, Share, Modify).
 	
+	
+	He could not fight back the fact that software could be copyrighted. But he knew that a license was a contract. And that you could always write your own contract.
+	Therefore, he imagined a contract that would give you the freedom to modify and redistribute a software. In fact, he even managed to write that contract in a way that would guarantee that the software stays "free". The word "free" should be understood as in "freedom", not as in "free beer". That’s why the french/spanish world "libre" is often used to clarify the meaning. FLOSS means : "Free and Libre Open Source Software". But "Free Software" was often confused with "Freeware", softwares that are proprietary but distributed freely (often as a limited version of a paying proprietary software). People building Free Software were looking for a clarification.
+	Some hackers managed to find the word "Open Source".
+	
+	This contract was called the \textbf{General Public License (GPL)}, and software that respected the freedom of the users were called "Free Software".
+	
 	Richard came with 4 free of software. Free as freedom, not like gratis. Those are just arbitrary but for him, a soft is free if :
-	1.	Use
-	2.	Study : free to study the soft. What was the decision was used in the software. So you need the source code
-	3.	Right to share, you can make copy of it
-	4.	Right to modify
-	Their is nothing about money. You couldn't technically sell it ?
+	1.	Use : The right to use it how you want it
+	2.	Study : The right to study it (requiring the source code). What was the decision was used in the software. So you need the source code
+	3.	Modify : The right to modify it
+	4.	Share :  The right to redistribute it (you can make copy of it)
+	
+	If you don’t have those four freedoms, you will quickly hit arbitrary limitations. Those four freedoms are only a clever way to explicit the "right to use the software with full control over it".
+	
+	The GPL not only provided those 4 freedoms. It also ensured that those freedoms would be preserved, by stating explicitely in the conditions of the contract: should the user redistribute the software to someone else, he should provide those same freedoms to that other person. This concept is named "copyleft", where the only restriction you have to agree to is… to not create any restrictions. You have all the freedoms of the software, except the freedom of taking away some of these freedoms from others. You cannot use a GPL code in a proprietary software. If you do, the proprietary software would automatically be "contaminated" and become GPL. Other licenses like MIT and BSD will soon appears.
+	
+	
+It is important to note that \textbf{nothing prevents anyone from selling free software}. As long as you give those same rights to your customers, you can sell the software. Richard Stallman himself earned a living for multiple years by selling copy of Emacs, at a time where Internet connection was rare. You would send him money and an envelope, and he would send you a disk with the software.
+
 	Richard left mit and created emacs, started to sell it : you send a tape with a check and copied to source code to the tape and send it back. He encouraged every one to copy and shared it.
 	
-	\textbf{GNU Project:} Creating a free UNIX replacement (Tools, GCC, Emacs).
+	
+Eric Raymond and Bruce Perens coined the term Open Source hoping that this would convince the industry that Free Software was not only for moneyless kids and punks. There was a real business behind it.
+From the start, Richard Stallman was really worried that the word "open source" would hide the fact that Free Software were about freedoms, not about technicalities. By hiding the word "free", we would loose the freedoms.
+In insight, he was perfectly right.
+Eric Raymond was famous for writing an essay called "The cathedral and the bazaar" in which he defended that software was so complex that you could not make it with only a few persons. That making it open source forced to write good software, that bugs would eventually be found, that people would contribute brilliant unexpected patches.
 	
 	
 	
@@ -300,7 +483,7 @@ In toyota car, they put the worst engineer fo rthe soft part. “bc a car is abo
 	·	Long-term sustainability: company switching priorities, company going bankrupt?
 	·	Code quality: Proprietary — the product matters, not the code. Most of the time, it’s poor-quality code.
 	
-	
+	Proprietary doesn't means its good, far from it. Teacher example : In toyota car, they put the worst engineer fo rthe soft part. “bc a car is about mechanical”. Toyota missile and they claimed a mechanical failure. But after investigation they found the worst code ever.
 	
 	\newpage
 	
@@ -309,6 +492,26 @@ In toyota car, they put the worst engineer fo rthe soft part. “bc a car is abo
 	
 	\section{The Linux Revolution \& Modern Development}
 
+	
+	\subsection{The UNIX Wars \& Standards}
+	happened before or during the birth of Linux. It explains why Linus created Linux (because BSD was in a lawsuit).
+	
+	\textbf{BSD vs. System V:} The lawsuit that slowed down BSD adoption.
+	
+	BSD vs. UNIX: Bell Labs sued Berkeley, saying BSD used codes from UNIX. Everyone was afraid to use BSD because the use of BSD could become illegal if they loose in court. But GNU/Linux appeared with the web. In fact only 6 files were from Bell Labs, but it took years to find them. Once they rewrote them, BSD became officially okay to use.
+	
+	
+	\textbf{POSIX:} The attempt to standardize UNIX (Interfaces, Shell vs. Terminal).
+	
+	There was not one UNIX release. Source code was just exchanged, and you adapted it to your needs. Now the world has changed; source code was made by companies for people who didn’t care about the source code. Companies made the source code proprietary. Open source was the default.
+	
+	
+	UNIX was very fragmented. One software couldn’t run on another version. The idea of POSIX is to define a standard. To create a standard, you need deep knowledge from various experts. When the group agrees, they release a standard. There is no obligation to follow a standard; it’s a choice to follow them (also a marketing practice to say you follow one). If you want to follow one, someone has to validate that you correctly follow it. For W3C, there are also automatic tools to check if your website correctly follows it. Companies could follow a standard just before they are audited, then stop following it but still get certified.
+	Organizations for standards: ISO, OASIS, IEEE, W3C.
+	The problem with all UNIX versions is that users were captive under one version. POSIX defines standards to explain what UNIX is. It even defines what tools you should have (ls, cd) and their arguments. That’s part of the POSIX specification.
+	GNU by Richard Stallman followed most of the POSIX specs. He also added more features. The GNU extension was to add more verbose options for arguments: ls --all compared to ls -a.
+	All UNIX tools were bundled in BSD.
+		
 	
 	\subsection{The Missing Kernel}
 
@@ -330,24 +533,7 @@ In toyota car, they put the worst engineer fo rthe soft part. “bc a car is abo
 	GNU –> implement unix soft with copyleft license. (copyleft : If you don’t distribute it, you dont have to share the code, its a contract between code author and the user. So if no user, no need to make public. User have the right to share it themself because copyleft means no restriction. Free to give it to someone else. Therefore you become the distributor. )
 	
 	
-	\subsection{The UNIX Wars \& Standards}
 
-	
-    \textbf{BSD vs. System V:} The lawsuit that slowed down BSD adoption.
-    
-	BSD vs. UNIX: Bell Labs sued Berkeley, saying BSD used codes from UNIX. Everyone was afraid to use BSD because the use of BSD could become illegal if they loose in court. But GNU/Linux appeared with the web. In fact only 6 files were from Bell Labs, but it took years to find them. Once they rewrote them, BSD became officially okay to use.
-
-	
-	 \textbf{POSIX:} The attempt to standardize UNIX (Interfaces, Shell vs. Terminal).
-	
-	There was not one UNIX release. Source code was just exchanged, and you adapted it to your needs. Now the world has changed; source code was made by companies for people who didn’t care about the source code. Companies made the source code proprietary. Open source was the default.
-	
-	
-	UNIX was very fragmented. One software couldn’t run on another version. The idea of POSIX is to define a standard. To create a standard, you need deep knowledge from various experts. When the group agrees, they release a standard. There is no obligation to follow a standard; it’s a choice to follow them (also a marketing practice to say you follow one). If you want to follow one, someone has to validate that you correctly follow it. For W3C, there are also automatic tools to check if your website correctly follows it. Companies could follow a standard just before they are audited, then stop following it but still get certified.
-	Organizations for standards: ISO, OASIS, IEEE, W3C.
-	The problem with all UNIX versions is that users were captive under one version. POSIX defines standards to explain what UNIX is. It even defines what tools you should have (ls, cd) and their arguments. That’s part of the POSIX specification.
-	GNU by Richard Stallman followed most of the POSIX specs. He also added more features. The GNU extension was to add more verbose options for arguments: ls --all compared to ls -a.
-	All UNIX tools were bundled in BSD.
 	
 	
 	
@@ -390,97 +576,24 @@ In toyota car, they put the worst engineer fo rthe soft part. “bc a car is abo
 	
 	
 	
-	
-	\section{Legal Frameworks, Economics \& Licensing}
 
-	
-	\subsection{Rival good VS non rival good}
-	
-	
-	\begin{itemize}
-		\item Rival : If i take pasta from the shop, their is one item less in the shop, the shop lose money, only one persone can use it. stealing
-		
-		\item Non rival : their is a bridge an dyou had to pay to cross the bridge. If you don’t pay and cross the bridge its not stealing in the sense that people who build the bridge didn’t lose money (lost money opportunity)
-		First time we have seen “intellectual property” : greek city where the inventor of a recipe had to be paid for one year every itme a cook was doing the dish.
-		Coying music from cd to tape was a quality lost but not a problem, bc music was assiocated with the physical object.
-		Before a book was really expensive (monk copy) then cheap with type machine. At the beginning their was no protection for author. The content could be “stolen”, ideas could be spread accross everywhere. The idea inside the bood was not rival anaymore. So it was a problem for the king that wanted to keep their power.
-		Copyright was a pure censorship of book.
-	\end{itemize}
-	
-	Droit d’auteur, composé de droit patrimonial and droit moral. 
-	
-	
-	\subsection{Intellectual Property Laws}
-	
-	Droit moral could never be removed (have your name, be recognize has the author, author can say his work cannot be said by nazi party bc he will look like a nazy himself
-	Droit patrimonial : right to sell, similar to the copyright. Their is no taxes on this rights (at least in Belgium) generally in a contract, you give all your patrimonial rights to the employer. 
-	
-	You can sell a copyright but not a droit d’auteur. So what happens when the author died ? 50 years after death will go to public domain. So every body could use it.The US was really afraid bc mickey mouse will soon reach this date (50 years after death of Walt Disney). He didn’t wanted mickey to go to public domains. So mickey mouse laws and become 70 years. Currently it became public domain. So suddenly their was a big hole in the public domain. Catastrophe for the culture bc if the author think his work will not be popular, he will stop publishing. And cannot copy his work bc of this law. So all those works will died and be forgotten.
-	When their is no 1 author, the law is 70 years after the last work. So for Tintin, the guy will publish a new book one year before it reach this date just to extend it.
-	
-	Trade mark ?
-	Patent : temporary monopoly on what you have invented. But what about when 2 different people got the same idea independently ? Group that decide the inventor. However you don’t have to invent it. You just have to invent it.its basically lawyer discussion to lawyer. So company tries to do has many patent has possible. When patent infringement it will go to “who has the most patent”, even if they are all stupid. In the pharma industry, they slightly modify the formula so that their is a new patent .and under the same name.
-	
-	
-	When independence : USA said that they will not recognize any patent from Europe. So they can copy everything and grow faster. That’s how every contry start when they want to become industrial giant. WW2 has made american product know therfore they got a market to sell their product like coca cola.
-	Pirate bay was perfectly legal in sweden because it was just text (torrent) that couldn’t be copy righted. Pirate bay fucked around with the copyright noticed until one day. Police raid ? It took everybody by surprise; USA send treat to sweden, if those guys of pirate bay didn’t go to jail, USA will stop “obama deal “? Mutual investment of military ? USA impose they view of the world to others.
-	Kopimism religon, life if share by copying religion.so if people went to court you can say you are kopimislm you could copy code. Freedom of relgion won in sweden. 
-	
-	Stuff who “take for granted now” where choice by politics to convice people that their is no alternative.
-	
-	
-	
-	Piracy is not bad :) the brain washed with the small scene at the beginning “you wouldn’t steal a car, piracy is a crime”, well the font they use was pirated, and every pirate didn’t event see this scene. OpenAI, Meta can pirate to train their AI models jsut bc they have money. Somes are protected by the lows, othrs must obey the lows.
-	
-	
-	
-	\subsection{Software Licenses (The Spectrum)}
-
-	
-	Berkeley : was doing a lot of soft and made BSD. Before their was no official unix so everyone wanted to do its own.
-	
-	We couldn’t say who was the author of a given software. 1 line of code could belong to 1 person.
-	License is ~a contract = agreement bewteen two party. Between the owner of the copyright of the software and the user.and could be a contract for each user. A license is a standardized contract and its not tied to the sofware but to a specific distribution of the software (bc can vary to each user). For example if we dl soft from github they will be a specifc license.
-	One of the first license was the BSD : you can do whatever you wnat but you have to list the author.so compatible with the 4 Free statment of Stalman. But we cannot garantee that the sofware stay free.
-	The license happend when their is a exchange (dl the source code), the act of distributing. So if you dl a code with a specific license, you have this license for life even if in githube the license change.
-	GNU : (gnu is not unix) whole operating system with its compiler gcc + emacs. So the gnu public licence (GPL) to garentee a soft stay libre. So the 5th freedom is “ you cant remove freedoms”. Concept of copyleft?
-	
-	
-	A license is a contract between the owner of the software and the user. The owner of the rights of the software is not necessarily the developer; he can sell the rights (for a salary). They apply to a specific distribution of the software. So for the same software, you can have multiple licenses, dual licensing for the same software. By default: each file has its own license.
-	Family of licenses: 
-	·	Proprietary (restricts the rights of the user).
-	·	Permissive license (you can do whatever you want but must at least credit the original author: BSD, MIT).
-	·	Copyleft license: GNU/GPL, you can change the license but with similar rights (compatible license). If you put a GPL code fragment, the whole software becomes GPL.
-	GPL2 (Linux kernel license): Tivo problem, where you couldn’t run other software; and GPL3: you cannot prevent other source code from running on the same hardware. LGPL is for libraries and does not contaminate the whole process.
-	
-	
-	The user = the one who runs the code on a computer. When you do a Google search, the user is Google’s servers themselves. AGPLv3: the users are the ones using the output? Anyone connecting to the server has the right to get the source code?
-	
-	Agpl, is copyleft over the network : everyone who use the soft through a network must also be able to get the source code. So it’s More than gpl
-	
-	
-	\subsection{Non-Software Licensing (Creative Commons)}
-	 Adapting licenses for non-code assets (BY, SA, NC, ND).
-	
-	Creative Commons license: GPL, BSD, etc. are really focused on software. Now we want licenses for anything else: pictures, textbooks, games, anything that is not pure code. They can be used for code but don’t fit well. Games: license for the code and license for the assets of the game. The goal of the CC is to make a set of licenses for your own case. Do you want attribution to you? Do you want to allow other people to use your work commercially? Derivative works (can people modify it)? Are they forced to use the same license?
-	Clauses:
-	·	 BY: credit the author.
-	·	 NC: non-commercial (so not a free license).
-	·	SA: share alike, like copyleft, you have to keep the same rights (not a more restrictive license).
-	·	ND: no derivatives, I don’t want any modification.
-	·	CC0: no clauses, do what you want. As an author, you cannot abandon your rights, so you use an explicit license to say that (~like public domain).
-	A license is not revocable! If a file is distributed once with a permissive license, you can’t change it later.
-	CC is on version 4, because there was a bug in version 3. The license applies if you respect all of the clauses. If you don’t give proper credit, the whole license is revoked. If you use a picture and don’t credit it, you don’t have the rights of CC. The default license applies, and it’s standard copyright. So many scammers created databases of pictures with very long names. When people used the pictures and made a mistake in the name, they received cease and desist letters and were asked for thousands of dollars.
-	Licensing agreement: I give my code to the project (I’m still the author, credits, droit d’auteur), but I give up my copyright (droits patrimoniaux). You (the project/company) are free to update the license without informing me. Otherwise, they would have to contact everyone.
-	
-	
-	\newpage
 	
 	
 	
 	
 	
 	\section{The Internet Age \& The Browser Wars}
+
+
+
+	\subsection{The Networking Revolution}
+To communicate witha computer, you need to be connected to it directly. Pour connecter 2 ordinateurs : mettre le téléphone sur l’ordinateur. Le pc convertit les signal sonore en bits ? Modem ?
+What if each computer had an adress and we can send packets to the correct computer. So need to be connected to only one comuter that will route the packets. TCP/IP
+Web is one application / protocol running of top of TCP/IP (internet). So for now we have internet bt not yet the web.
+Telnet : before SSH and not encrypted
+FTP : transfert file
+SMTP : mail
+UUCP : unix to unix copy, used by usednet (public forum). Big database synchronyse to all computer. So when you wanted to see a message, you had to dl everything. This is how people started to exchange on the internet
 
 
 	
@@ -520,7 +633,7 @@ In toyota car, they put the worst engineer fo rthe soft part. “bc a car is abo
 	
 	
 	
-	\section{Modern Challenges: Privacy, Security, \& Society}
+	\section{Privacy \& Surveillance}
 	
 	\subsection{Surveillance Capitalism}
 	
@@ -555,7 +668,7 @@ In toyota car, they put the worst engineer fo rthe soft part. “bc a car is abo
 	–	Not having your data on the company → decentralization or distributed instead of centralization. Email, for example, can be decentralized; Fediverse (Mastodon). Anyway, you need a protocol for decentralization because you need all nodes to agree. But it’s difficult to make a standard. You can’t force someone to use it; otherwise, it will be centralization.
 	
 	
-	\subsection{Security Concepts}
+	\section{Computer Security}
 
 	
 
