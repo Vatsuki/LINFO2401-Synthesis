@@ -1,12 +1,10 @@
-% Licensed under CC NC-SA 4.0
-
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc} % if using pdflatex; if using xelatex remove this and use fontspec
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb}
-\usepackage{hyperref} % For clickable Table of Contents
+\usepackage{hyperref}
 \usepackage{parskip}  % Adds space between paragraphs instead of indentation
-\usepackage{titlesec} % For custom section formatting
+%\usepackage{titlesec} % For custom section formatting
 \usepackage[english]{babel}
 \usepackage[
 a4paper,
@@ -122,20 +120,17 @@ With the development of reliable submarine cables, the world became globally con
 
 \subsection{Typewriters and Keyboards}
 
-
-The text recounts the invention and impact of the **typewriter**, focusing on how technical accidents and commercial decisions shaped the way humans still interact with computers today. 
-
 Christopher Sholes developed the typewriter to produce standardized, readable documents, offering an alternative to slow handwriting and expensive printing processes. Among many competing designs, his machine stood out.
 
-Key aspects of modern keyboards especially the **QWERTY layout**—are shown to be largely accidental. In his prototype, the keyboard were not aligned due to technical constraint and jamming. A temporary fix was to randomize the layout  to avoid frequent use of letters next to each other. \textbf{This lead to the QWERTY layout}. Even after the defect was fixed, the layout was kept for commercial reasons, to avoid admitting flaws in already sold machines. As a result, an inefficient and arbitrary keyboard arrangement used worldwide.
+In his prototype, the keyboard were not aligned due to technical constraint and jamming. A temporary fix was to randomize the layout  to avoid frequent use of letters next to each other. \textbf{This lead to the QWERTY layout}. Even after the defect was fixed, the layout was kept for commercial reasons, to avoid admitting flaws in already sold machines. As a result, an inefficient and arbitrary keyboard arrangement used worldwide.
 
 National variants such as \textbf{AZERTY} and \textbf{QWERTZ} likely arose not from technical necessity but from commercial protectionism, a trend later reinforced by IBM, which further fragmented layouts across countries (AZERTY BE, AZERTY FR).
 
 Although typewriters symbolized administrative work, an unexpected effect emerged. People (especially professional women typists) learned to type extremely fast. This efficiency led major writers such as Nietzsche, Steinbeck, and Hemingway to abandon handwriting. The typewriter altered not just their productivity, but their style of writing and thinking.
 
-Attempts to correct QWERTY’s inefficiencies, most notably **Dvorak’s keyboard layout**, proved technically superior and enabled record typing speeds. However, they failed commercially because users were already accustomed to QWERTY. 
+Attempts to correct QWERTY’s inefficiencies, like Dvorak’s keyboard layout, proved to be technically superior and enabled record typing speeds. However, they failed commercially because users were already accustomed to QWERTY. 
 
-If you are serious about writing on a keyboard, learning to touch type is the best investment you could ever to. Anyone serious about using a computer should spend some type to learn real dactylography. 
+If you are serious about writing on a keyboard, learning to touch type is the best investment you could ever do. Anyone serious about using a computer should spend some type to learn real dactylography. 
 And if you are learning touch typing, learning a layout optimized for your language is probably a very good investment. Some current efficient layout :
 
 
@@ -184,11 +179,16 @@ Main frames compared to Microcomputers : couldn’t run unix : atari, comodor. P
 
 \subsection{The Shell and Pipes}
 
+Every command-line process in Linux operates with at least two fundamental data streams: standard input (stdin) and standard output (stdout). A program reads data from stdin and writes its results to stdout. Understanding how to control both stdin and stdout is crucial for effective command-line work.
+
 \begin{itemize}
-	\item 	< to add input
-	\item > for output
-	\item | input of one is the output of the other
+	\item \texttt{> }: The \texttt{>} character is a redirection operator. It intercepts the data heading to \texttt{stdout} and sends it to a new destination. If you want to add to a file without erasing its contents, use the \texttt{>>} operator.
+	\item \texttt{< } : Similarly, we can also manage the standard input (\texttt{stdin}) stream. By default, a program receives its \texttt{stdin} from the keyboard, but we can also use files or the output from other processes as an input source. we use the < operator to redirect stdin. This powerful feature allows you to tell a command to read its input from a file instead of waiting for you to type it on the keyboard. 
+	\item \texttt{|} : In Linux, the command line becomes incredibly powerful when you start connecting commands. Instead of running one command, saving its output, and then running another, you can create a pipeline to pass data directly between them. The pipe operator |, represented by a vertical bar, is the key to this process. It takes the standard output (stdout) of the command on its left and uses it as the standard input (stdin) for the command on its right.
+	\item \texttt{tee} : What if you want to see the output on your screen and save it to a file simultaneously? This is where the tee command comes in. The pipe and tee command in linux is a classic combination for logging and monitoring.
 \end{itemize}
+
+\footnote{Thoses explanations comes from \href{https://labex.io/linuxjourney}{https://labex.io/linuxjourney}, the \textit{text-fu} section.}
 
 Shell = asking for a command (bash, zsh). Not the same thing as the terminal!
 
